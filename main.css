@@ -1,0 +1,449 @@
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/abrilfatface/v12/zOL64pLDlL1D99S8g8PtiKchm-A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body header {
+  background: #0A0A0A;
+  display: flex;
+  justify-content: center;
+}
+body header .logo {
+  color: #f1f1f1;
+  padding: 2% 0;
+  font-family: 'Poppins', sans-serif;
+}
+body .fade {
+  opacity: 1;
+}
+body h1,
+body h2 {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 100;
+}
+body h4 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+body a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #f1f1f1;
+  letter-spacing: 2px;
+}
+body p,
+body li {
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+}
+body footer {
+  background: #30383D;
+  flex: 1;
+  text-align: center;
+  padding: 10% 0;
+}
+body footer ul li {
+  display: inline;
+}
+body footer .fab,
+body footer .fas {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  padding: 4% 0;
+}
+.homepage .hero {
+  display: flex;
+  padding: 7% 0;
+  position: relative;
+  background-image: url(images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 60vh;
+  align-items: center;
+}
+.homepage .hero .hero-right {
+  margin: 5% auto;
+  text-align: center;
+  color: white;
+}
+.homepage .hero h1 {
+  font-size: 2rem;
+  padding-bottom: 2%;
+}
+.homepage .hero p {
+  font-family: 'Poppins', sans-serif;
+}
+.homepage section.about {
+  margin: 0 auto;
+  width: 90%;
+  padding: 2% 0;
+  text-align: center;
+}
+.homepage section.about img.front {
+  border-radius: 50%;
+  padding: 2% 0;
+}
+.homepage section.about p {
+  margin: 0 auto;
+  line-height: 2;
+}
+.homepage section.about h3 {
+  padding: 2% 0;
+}
+.homepage section.about ul {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding: 2% 0;
+}
+.homepage section.about li {
+  margin: 0 2%;
+}
+.homepage .portfolio {
+  color: #f1f1f1;
+  padding: 2%;
+  text-align: center;
+  margin-bottom: 6%;
+  /* Style the buttons */
+  /* Add a grey background color on mouse-over */
+  /* Add a dark background color to the active button */
+}
+.homepage .portfolio h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.homepage .portfolio div#myBtnContainer {
+  padding-top: 2%;
+}
+.homepage .portfolio .btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+.homepage .portfolio .btn:hover {
+  background-color: #ddd;
+}
+.homepage .portfolio .btn.active {
+  background-color: #666;
+  color: white;
+}
+.homepage .portfolio .row {
+  margin: 8px -16px;
+  background: #0A0A0A;
+  color: #f1f1f1;
+  /* Add padding BETWEEN each column (if you want) */
+  /* Create three equal columns that floats next to each other */
+  /* Clear floats after rows */
+  /* Content */
+  /* The "show" class is added to the filtered elements */
+}
+.homepage .portfolio .row .row,
+.homepage .portfolio .row .row > .column {
+  padding: 8px;
+}
+.homepage .portfolio .row img {
+  width: 100%;
+}
+.homepage .portfolio .row .column {
+  float: left;
+  width: 100%;
+  display: none;
+  /* Hide columns by default */
+}
+.homepage .portfolio .row .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.homepage .portfolio .row .content {
+  padding: 10px;
+  background: white;
+  color: #0A0A0A;
+  margin: 3%;
+  text-align: left;
+  /* The Modal (background) */
+  /* Modal Content/Box */
+  /* The Close Button */
+}
+.homepage .portfolio .row .content #myBtn {
+  border: none;
+  background: white;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.homepage .portfolio .row .content .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+.homepage .portfolio .row .content .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+.homepage .portfolio .row .content .modal-content a {
+  color: #0A0A0A;
+  text-decoration: underline;
+  margin-right: 2%;
+}
+.homepage .portfolio .row .content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.homepage .portfolio .row .content .close:hover,
+.homepage .portfolio .row .content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.homepage .portfolio .row .show {
+  display: block;
+}
+.homepage .resume {
+  background: #30383D;
+  padding: 1% 7%;
+  border-radius: 30px;
+}
+.homepage .resume:hover {
+  background: #0A0A0A;
+  transition: 0.5s ease-in;
+}
+footer.footer-adjust {
+  margin-top: 5%;
+}
+.projects {
+  background: #f1f1f1;
+  display: flex;
+  flex-flow: row wrap;
+}
+.projects h2 {
+  text-align: center;
+}
+.projects .p-circle {
+  position: relative;
+  text-align: center;
+  margin: 2% 0;
+}
+.projects .p-circle img {
+  width: 100%;
+  padding: 2% 4%;
+}
+.projects a.hover-btn {
+  color: #0A0A0A;
+  border-bottom: 1px solid #0A0A0A;
+}
+.projects a.hover-btn:hover {
+  padding: 1% 3%;
+  border-bottom: hidden;
+  transition: 0.5s ease;
+}
+/*******************************
+
+PROJECT STLYING
+
+**********************************/
+.project-page {
+  line-height: 1.5;
+  color: #30383D;
+}
+.project-page .container {
+  background: #f1f1f1;
+  padding: 4% 0;
+}
+.project-page .container .intro {
+  padding: 2%;
+}
+.project-page .container .intro h1 {
+  font-size: 4rem;
+  width: 40%;
+  line-height: 1;
+}
+.project-page .container .intro p {
+  line-height: 2;
+  font-size: 1.2rem;
+  padding-top: 3%;
+}
+.project-page .container .services {
+  padding: 12%;
+  line-height: 2;
+  list-style-type: none;
+}
+.project-page .container .services h3 {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  padding-top: 3%;
+}
+.project-page .display {
+  text-align: center;
+}
+.project-page img {
+  width: 100%;
+}
+.project-page .quote {
+  padding: 5% 0;
+  text-align: center;
+  width: 100%;
+}
+.project-page .quote h2 {
+  font-size: 2rem;
+}
+.project-page .project-link {
+  margin: 4% 0;
+}
+.project-page .project-link h4 {
+  margin: 4% 0;
+}
+.project-page .project-link a:hover {
+  transition: 0.5s ease-in;
+}
+.project-page .return,
+.project-page .project-link a {
+  background: #30383D;
+  border-radius: 30px;
+  color: #f1f1f1;
+  padding: 1% 6%;
+  margin: 4% 0;
+}
+.project-page .return:hover {
+  transition: 0.5s ease-in;
+}
+.display-ham img {
+  width: 100%;
+}
+.return-home {
+  text-align: center;
+}
+@media (min-width: 400px) {
+  .hero .homepage .projects .p-circle img {
+    width: 90%;
+  }
+}
+@media (min-width: 600px) {
+  .projects {
+    justify-content: center;
+  }
+}
+@media (min-width: 750px) {
+  .homepage .hero {
+    min-height: 87vh;
+  }
+  .homepage .hero .hero-right {
+    width: 55%;
+  }
+  .homepage .hero h1 {
+    font-size: 3rem;
+  }
+  .homepage section.about p {
+    width: 60%;
+  }
+  .homepage section.about h3 {
+    padding: 2% 0;
+  }
+  .homepage .portfolio .row .column {
+    width: 33.3333333%;
+    height: 410px;
+  }
+  .project-page .container {
+    display: flex;
+  }
+  .project-page .container .intro {
+    width: 60%;
+  }
+  .project-page .container .services {
+    padding: 5% 0 2% 5%;
+    width: 40%;
+  }
+}
+/*******************************
+
+******************************/
+@media (min-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-left: 0;
+  }
+  .resume {
+    padding: 3% 25%;
+  }
+}
+@media (min-width: 1000px) {
+  .projects .p-circle img {
+    padding: 8% 13%;
+  }
+  .display {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .display img {
+    width: 50%;
+  }
+  .project-page .container .services {
+    width: 30%;
+  }
+  .project-link {
+    width: 50%;
+  }
+  .return-home {
+    width: 100%;
+    margin-top: 10%;
+  }
+}
+@media (max-width: 400px) {
+  .project-page .intro h1 {
+    font-size: 2.5rem;
+  }
+  .project-page .intro {
+    padding: 7%;
+  }
+}
+@media (max-width: 1000px) {
+  .return-home {
+    margin-top: 10%;
+  }
+}

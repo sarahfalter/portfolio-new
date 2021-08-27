@@ -1,0 +1,523 @@
+@import "variables.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    header {
+        background: @black;
+        display: flex;
+        justify-content: center;
+      .logo {
+          color: @light-gray;
+          padding: 2% 0;
+          font-family: @body-text;
+
+      }
+    }
+
+    .fade {
+        opacity: 1;
+      }
+    h1,
+    h2 {
+        font-family: @headline;
+        font-weight: 100;
+    }
+    h4 {
+        font-family: @body-text;
+        letter-spacing: 2px;
+    }
+    a {
+        font-family: @body-text;
+        text-decoration: none;
+        color: @light-gray;
+        letter-spacing: 2px;
+    }
+    p, li {
+        font-family: @body-text;
+        list-style-type: none;
+    }
+
+   
+
+    footer {
+        background: @dark-blue;
+        flex: 1;
+        text-align: center;
+        padding: 10% 0;
+        ul li {
+            display: inline;
+        }
+        .fab, 
+        .fas {
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            padding: 4% 0;
+        }
+    }
+}
+
+.homepage {
+    .hero {
+        display: flex;
+        padding: 7% 0;
+        position: relative;
+        background-image: url(images/hero-img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        min-height: 60vh;
+        align-items: center;
+
+        .hero-right {
+            margin: 5% auto;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            padding-bottom: 2%;
+        }
+        p {
+            font-family: @body-text;
+        }
+       }
+    
+        section.about {
+            margin: 0 auto;
+            width: 90%;
+            padding: 2% 0;
+            text-align: center;
+
+            img.front {
+                border-radius: 50%;
+                padding: 2% 0;
+            }
+
+            p {
+                margin: 0 auto;
+                line-height: 2;
+            }
+
+            h3 {
+                padding: 2% 0;
+            }
+
+            ul {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: center;
+                padding: 2% 0;;
+            }
+
+            li {
+                margin: 0 2%;
+            }
+        }
+    
+        .portfolio {
+            color: @light-gray;
+            padding: 2%;
+            text-align: center;
+            margin-bottom: 6%;
+             
+          h2 {
+              font-size: 2rem;
+              letter-spacing: 1px;
+          }
+          div#myBtnContainer {
+            padding-top: 2%;
+        }
+          /* Style the buttons */
+          .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+          }
+          
+          /* Add a grey background color on mouse-over */
+          .btn:hover {
+            background-color: #ddd;
+          }
+          
+          /* Add a dark background color to the active button */
+          .btn.active {
+            background-color: #666;
+             color: white;
+          }
+        .row {
+            margin: 8px -16px;
+            background: @black;
+            color: @light-gray;
+
+          
+          /* Add padding BETWEEN each column (if you want) */
+          .row,
+          .row > .column {
+            padding: 8px;
+          }
+
+          img {
+              width: 100%;
+          }
+          
+          /* Create three equal columns that floats next to each other */
+          .column {
+            float: left;
+            width: 100%;
+            display: none; /* Hide columns by default */
+          }
+          
+          /* Clear floats after rows */
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          
+          /* Content */
+          .content {
+            padding: 10px;
+            background: white;
+            color: @black;
+            margin: 3%;
+            text-align: left;
+  
+            #myBtn {
+                border: none;
+                background: white;
+                text-decoration: underline;
+                font-size: 18px;
+                
+            }
+            
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; /* 15% from the top and centered */
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%; /* Could be more or less, depending on screen size */
+
+                a {
+                    color: @black;
+                    text-decoration: underline;
+                    margin-right: 2%;
+                }
+            }
+            
+            /* The Close Button */
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+          }
+          
+          /* The "show" class is added to the filtered elements */
+          .show {
+            display: block;
+          }
+    
+         }
+        }
+        .resume {
+            background: @dark-blue;
+            padding: 1% 7%;
+            border-radius: 30px;
+        }
+
+        .resume:hover {
+            background: @black;
+            transition: .5s ease-in;
+        }
+
+    
+    }
+
+footer.footer-adjust {
+    margin-top: 5%;
+}
+
+    .projects {
+        background: @light-gray;
+        display: flex;
+        flex-flow: row wrap;
+        h2 {
+            text-align: center;
+        }
+        .p-circle {
+            position: relative;
+            text-align: center;
+            margin: 2% 0;
+            img {
+                width: 100%;
+                padding: 2% 4%;
+            }
+        }
+
+        a.hover-btn {
+            color: @black;
+            border-bottom: 1px solid @black;
+        }
+
+        a.hover-btn:hover {
+            padding: 1% 3%;
+            border-bottom: hidden;
+            transition: .5s ease;
+        }
+       
+    }
+
+
+/*******************************
+
+PROJECT STLYING
+
+**********************************/
+.project-page {
+    line-height: 1.5;
+    color: @dark-blue;
+    .container {
+        background: @light-gray;
+        padding: 4% 0;
+    .intro {
+        padding: 2%;
+        h1 {
+            font-size: 4rem;
+            width: 40%;
+            line-height: 1;
+        }
+        p {
+            line-height: 2;
+            font-size: 1.2rem;
+            padding-top: 3%;
+        }
+    }
+    .services {
+        padding: 12%;
+        line-height: 2;
+        list-style-type: none;
+        h3 {
+            font-family: @headline;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            padding-top: 3%;
+        }
+    }
+    }
+    .display {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+    }
+
+    .quote {
+        padding: 5% 0;
+        text-align: center;
+        width: 100%;
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .project-link {
+        margin: 4% 0;
+        h4 {
+            margin: 4% 0;
+        }
+    }
+
+    .project-link a:hover {
+        transition: .5s ease-in;
+    }
+    .return, .project-link a {
+        background: @dark-blue;
+        border-radius: 30px;
+        color: @light-gray;
+        padding: 1% 6%;
+        margin: 4% 0;
+    }
+
+    .return:hover {
+        transition: .5s ease-in;
+    }
+}
+
+.display-ham {
+    img {
+        width: 100%;
+    }
+}
+
+    .return-home {
+        text-align: center;
+    }
+
+
+@media (min-width: 400px) {
+    .hero {
+    .homepage .projects .p-circle img {
+        width: 90%;
+    }
+
+} 
+}
+
+@media (min-width: 600px) {
+    .projects{
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 750px) {
+
+    .homepage {
+        
+    .hero {
+        min-height: 87vh;
+
+        .hero-right {
+            width: 55%;
+        }
+        
+        h1 {
+            font-size: 3rem;
+        }
+      
+       }
+    
+        section.about {
+
+
+            p {
+                width: 60%;
+            }
+
+            h3 {
+                padding: 2% 0;
+            }
+        }
+        .portfolio {
+            .row {
+                .column {
+            width: 33.3333333%;
+            height: 410px;
+            }
+        }
+    }
+    
+    }
+    .project-page .container {
+        display: flex;
+        .intro {
+            width: 60%
+        }
+        .services {
+            padding: 5% 0 2% 5%;
+            width: 40%;
+        }
+
+    }
+}
+/*******************************
+
+******************************/
+@media (min-width: 900px) {
+    
+        h1 {
+            font-size: 2.5rem;
+            margin-left: 0;
+        }
+        .resume {
+            padding: 3% 25%;
+        }
+    }
+
+
+
+@media (min-width: 1000px) {
+
+    .projects .p-circle img {
+        padding: 8% 13%;
+    }
+    .display {
+        display: flex;
+        flex-flow: row wrap;
+        img {
+            width: 50%;
+        }
+    }
+
+    .project-page .container {
+        .services {
+            width: 30%;
+        }
+    }
+
+    
+    .project-link {
+        width: 50%;
+    }
+    .return-home {
+        width: 100%;
+        margin-top: 10%;
+    }
+}
+
+
+@media (min-width: 1400px) {
+
+}
+
+
+@media (max-width: 400px) {
+    .project-page .intro h1 {
+        font-size: 2.5rem;
+    }
+    .project-page .intro {
+        padding: 7%;
+    }
+}
+@media (max-width: 1000px) {
+    .return-home {
+        margin-top: 10%;
+    }
+}

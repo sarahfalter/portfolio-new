@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Falter</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/312ed6c8c1.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <header>
+      <a class="logo" href="index.html">SARAH FALTER</a>
+    </header>
+
+    <main class="homepage">
+        <section class="hero">
+         <div class="hero-right">
+                <p>HEY THERE</p>
+                <h1>I'm Sarah, a Web Design student and UX enthusiast.</h1>
+           </div>
+          </section>
+        
+
+        <section class="about">
+            <h2>About Me</h2>
+            <img class="front" src="images/sarahfalter-4.jpg" alt="Sarah Falter" width="200">
+            <p>
+              I'm Sarah, a self-proclaimed web developer and lover of good design. I'm a current student at the University of Florida working on my Master's in Web Design and Online Communications. I love working on projects from ideation to design all the way through the development process. Career-wise I would like to specialize in front-end development. Recently I've been learning React, PHP, and how to build web apps! Outside of work I love to paint and spend time with family/friends.
+            </p>
+
+            <h3>Things I've Worked With</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>LESS/SASS</li>
+              <li>Javascript</li>
+              <li>Bootstrap</li>
+              <li>REST APIs</li>
+              <li>Babel</li>
+            </ul>
+        </section>
+
+
+       <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          <button class="btn" onclick="filterSelection('solo')"> Solo</button>
+          <button class="btn" onclick="filterSelection('collab')"> Collabs</button>
+        </div>
+        
+        <!-- Portfolio Gallery Grid -->
+        <div class="row fade">
+
+          <div class="column solo">
+            <div class="content">
+              <img src="images/lunch-mockup.jpg" alt="Mountains" width="300">
+              <h4>ES6 Single Page App</h4>
+              <p>Simple Lunch Generator Web App</p>
+                        <!-- Trigger/Open The Modal -->
+                      <button id="myBtn">Project Details</button>
+
+                      <!-- The Modal -->
+                      <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <p>This single-page web application was a project completed by myself at the University of Florida. The goal of the project was to utilize ES6 to create a randomized lunch generator application. I designed the interface to be bright and modern, and built the app using ES6, Node.js, and Webpack.</p>
+                          <a href="http://sarahfalter.com/p3-falter-sarah/dist/index.html" target="_blank">View App</a>
+                          <a href="https://github.com/sarahfalter/p3-falter-sarah" target="_blank">Github Repo</a>
+                        </div>
+
+                      </div>
+            </div>
+          </div>
+          
+          <div class="column collab">
+            <div class="content">
+              <img src="images/brewery-mockup.jpg" alt="Lights" width="300">
+              <h4>3 Daughters Brewing</h4>
+              <p>Concept Site</p>
+
+                  <!-- Trigger/Open The Modal -->
+                  <button id="myBtn">Project Details</button>
+
+                  <!-- The Modal -->
+                  <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>This was a collaboration with a fellow UF student to redesign and develop a site for a business of our choosing. The site is a concept site and not currently used by the St. Pete based brewery. Bootstrap, LESS, HTML, and Javascript were used to develop the site, for design tools we used Adobe XD for wireframing and mockups and Adobe InDesign for our style guide and presentation deck.</p>
+                      <a href="http://sarahfalter.com/p3-falter-sarah/dist/index.html" target="_blank">View App</a>
+                      <a href="https://github.com/sarahfalter/p1-falter-christiana" target="_blank">Github Repo</a>
+                    </div>
+                 </div>
+             </div>
+          </div>
+
+          <div class="column solo">
+            <div class="content">
+                        <img src="images/met-mockup.jpg" alt="Lights" width="300">
+                        <h4>The Metropolitan Museum of Art</h4>
+                        <p>Concept Site</p>
+
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtn">Project Details</button>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+      
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>This site is a concept site for my dream client, I was assigned the task of building a site for a non-profit of my choosing featuring certain dynamic functionalities utilizing javascript. The second goal of this assignment was to utilize an API Get request to display dynamic content, mapbox API was utilized to create a fully functioning map within the site that allows the user to map themselves to the museum. </p>
+                            <a href="http://sarahfalter.com/p2-falter-sarah/" target="_blank">View App</a>
+                            <a href="https://github.com/sarahfalter/p2-falter-sarah" target="_blank">Github Repo</a>
+                          </div>
+                       </div>
+            </div>
+          </div>
+
+          <div class="column collab">
+            <div class="content">
+                <img src="images/hamilton-mockup.jpg" alt="Lights" width="300">
+                <h4>Hamilton</h4>
+                <p>Tribute Site</p>
+                <a href="hamilton.html">View</a>
+              </div>
+          </div>
+        
+    
+          <div class="column solo">
+            <div class="content">
+                <img src="images/m&t.jpg" alt="Lights" width="300">
+                <h4>Mermaids and Tadpoles</h4>
+                <p>Brand Identity Design</p>
+                <a href="mt.html">View</a>
+              </div>
+         </div>   
+    
+        <!-- END GRID -->
+        </div>
+    
+      </section>
+
+    </main>
+
+    <footer>
+        <h4>GET IN TOUCH</h4>
+        <ul>
+           <li>
+               <a href="https://linkedin.com/in/sarah-falter" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </li> 
+           <li>
+            <a href="https://github.com/sarahfalter" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+           <li>
+            <a href="tel:3216636487"><i class="fas fa-phone-square-alt"></a></i>
+           </li>
+           <li>
+            <a href = "mailto: sarah.falter@ufl.edu"><i class="fas fa-envelope"></a></i>
+           </li>
+
+        </ul>
+        <p>
+            Website Designed and Developed by Sarah Falter. Copyright Sarah Falter 2021.
+        </p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
