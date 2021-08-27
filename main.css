@@ -189,11 +189,12 @@ body footer .fas {
   /* Modal Content/Box */
   /* The Close Button */
 }
-.homepage .portfolio .row .content #myBtn {
+.homepage .portfolio .row .content .showModal {
   border: none;
   background: white;
   text-decoration: underline;
   font-size: 18px;
+  cursor: pointer;
 }
 .homepage .portfolio .row .content .modal {
   display: none;
