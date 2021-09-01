@@ -25,25 +25,109 @@ body {
 }
 body header {
   background: #0A0A0A;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50px;
+  /************************** Hamburger menu *********************/
+  /***************** Hamburger menu END ********************************/
 }
 body header .logo {
   color: #f1f1f1;
   padding: 2% 0;
   font-family: 'Poppins', sans-serif;
+  align-self: center;
+  margin-left: 7%;
+}
+body header .hamburger {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 50px;
+  padding: 1px 10px 2px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+body header .cross {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px 15px 0px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 3.5em;
+  line-height: 65px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+body header .menu {
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 0.6em;
+  width: 100%;
+  background: #0A0A0A;
+  position: absolute;
+  text-align: center;
+  font-size: 1em;
+}
+body header .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+body header .menu li {
+  display: block;
+  padding: 15px 0 15px 0;
+  border-bottom: white 1px solid;
+}
+body header .menu li:hover {
+  display: block;
+  background: #ffffff;
+  padding: 15px 0 15px 0;
+  border-bottom: white 1px solid;
+}
+body header .menu ul li a {
+  text-decoration: none;
+  margin: 0px;
+  color: white;
+  font-size: 0.8rem;
+}
+body header .menu ul li a:hover {
+  color: #000;
+  text-decoration: none;
+}
+body header .menu a {
+  text-decoration: none;
+  color: white;
+}
+body header .menu a:hover {
+  text-decoration: none;
+  color: #78848A;
 }
 body .fade {
   opacity: 1;
 }
 body h1,
-body h2 {
+body h2,
+body h3 {
   font-family: 'Abril Fatface', cursive;
   font-weight: 100;
+  color: #0A0A0A;
 }
-body h4 {
+body h4,
+body h5 {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
+  color: #0A0A0A;
 }
 body a {
   font-family: 'Poppins', sans-serif;
@@ -57,19 +141,27 @@ body li {
   list-style-type: none;
 }
 body footer {
-  background: #30383D;
+  background: #0A0A0A;
+  color: white;
   flex: 1;
   text-align: center;
-  padding: 10% 0;
+  padding: 3% 0;
+}
+body footer h5 {
+  color: white;
 }
 body footer ul li {
   display: inline;
+  margin: 0 1%;
 }
 body footer .fab,
 body footer .fas {
   font-size: 1.5rem;
   letter-spacing: 3px;
   padding: 4% 0;
+}
+body footer p {
+  font-size: 0.7rem;
 }
 .homepage .hero {
   display: flex;
@@ -84,41 +176,46 @@ body footer .fas {
   align-items: center;
 }
 .homepage .hero .hero-right {
+  animation: fadein 0.7s ease;
+  animation-fill-mode: both;
   margin: 5% auto;
   text-align: center;
   color: white;
 }
 .homepage .hero h1 {
+  animation: fadeInRight 1.3s ease;
+  animation-delay: 0.1s;
+  color: white;
   font-size: 2rem;
   padding-bottom: 2%;
 }
 .homepage .hero p {
   font-family: 'Poppins', sans-serif;
 }
-.homepage section.about {
+.homepage #about {
   margin: 0 auto;
   width: 90%;
   padding: 2% 0;
   text-align: center;
 }
-.homepage section.about img.front {
+.homepage #about img.front {
   border-radius: 50%;
   padding: 2% 0;
 }
-.homepage section.about p {
+.homepage #about p {
   margin: 0 auto;
   line-height: 2;
 }
-.homepage section.about h3 {
+.homepage #about h3 {
   padding: 2% 0;
 }
-.homepage section.about ul {
+.homepage #about ul {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
   padding: 2% 0;
 }
-.homepage section.about li {
+.homepage #about li {
   margin: 0 2%;
 }
 .homepage .portfolio {
@@ -126,6 +223,7 @@ body footer .fas {
   padding: 2%;
   text-align: center;
   margin-bottom: 6%;
+  height: 900px;
   /* Style the buttons */
   /* Add a grey background color on mouse-over */
   /* Add a dark background color to the active button */
@@ -145,10 +243,10 @@ body footer .fas {
   cursor: pointer;
 }
 .homepage .portfolio .btn:hover {
-  background-color: #ddd;
+  background-color: #e7e7e7;
 }
 .homepage .portfolio .btn.active {
-  background-color: #666;
+  background-color: #78848A;
   color: white;
 }
 .homepage .portfolio .row {
@@ -245,43 +343,8 @@ body footer .fas {
 .homepage .portfolio .row .show {
   display: block;
 }
-.homepage .resume {
-  background: #30383D;
-  padding: 1% 7%;
-  border-radius: 30px;
-}
-.homepage .resume:hover {
-  background: #0A0A0A;
-  transition: 0.5s ease-in;
-}
 footer.footer-adjust {
   margin-top: 5%;
-}
-.projects {
-  background: #f1f1f1;
-  display: flex;
-  flex-flow: row wrap;
-}
-.projects h2 {
-  text-align: center;
-}
-.projects .p-circle {
-  position: relative;
-  text-align: center;
-  margin: 2% 0;
-}
-.projects .p-circle img {
-  width: 100%;
-  padding: 2% 4%;
-}
-.projects a.hover-btn {
-  color: #0A0A0A;
-  border-bottom: 1px solid #0A0A0A;
-}
-.projects a.hover-btn:hover {
-  padding: 1% 3%;
-  border-bottom: hidden;
-  transition: 0.5s ease;
 }
 /*******************************
 
@@ -290,27 +353,29 @@ PROJECT STLYING
 **********************************/
 .project-page {
   line-height: 1.5;
-  color: #30383D;
+  color: #0A0A0A;
 }
 .project-page .container {
   background: #f1f1f1;
   padding: 4% 0;
+  margin-top: -10px;
 }
 .project-page .container .intro {
   padding: 2%;
 }
 .project-page .container .intro h1 {
-  font-size: 4rem;
-  width: 40%;
+  font-size: 2rem;
+  width: 70%;
   line-height: 1;
 }
 .project-page .container .intro p {
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   padding-top: 3%;
 }
 .project-page .container .services {
-  padding: 12%;
+  font-size: 0.8rem;
+  padding: 2%;
   line-height: 2;
   list-style-type: none;
 }
@@ -327,15 +392,15 @@ PROJECT STLYING
   width: 100%;
 }
 .project-page .quote {
-  padding: 5% 0;
+  padding: 5% 2%;
   text-align: center;
   width: 100%;
 }
 .project-page .quote h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 .project-page .project-link {
-  margin: 4% 0;
+  margin: 4% auto;
 }
 .project-page .project-link h4 {
   margin: 4% 0;
@@ -343,36 +408,60 @@ PROJECT STLYING
 .project-page .project-link a:hover {
   transition: 0.5s ease-in;
 }
-.project-page .return,
 .project-page .project-link a {
-  background: #30383D;
-  border-radius: 30px;
+  background: #0A0A0A;
   color: #f1f1f1;
   padding: 1% 6%;
-  margin: 4% 0;
+  margin: 2% 0;
 }
-.project-page .return:hover {
-  transition: 0.5s ease-in;
-}
-.display-ham img {
-  width: 100%;
-}
-.return-home {
-  text-align: center;
-}
-@media (min-width: 400px) {
-  .hero .homepage .projects .p-circle img {
-    width: 90%;
+@media (min-width: 500px) {
+  .hamburger {
+    right: 20px;
   }
 }
-@media (min-width: 600px) {
-  .projects {
-    justify-content: center;
+@media (min-width: 700px) {
+  body header .menu,
+  body header .hamburger,
+  body header .cross {
+    display: none;
+  }
+  body header .logo {
+    margin-left: 10%;
+  }
+  body header .menu-desktop {
+    display: block;
+    justify-self: end;
+    align-self: center;
+    margin-right: 27%;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+  body header .menu-desktop ul {
+    display: inline-flex;
+  }
+  body header .menu-desktop ul li {
+    padding: 0 8%;
+  }
+  body header .menu-desktop ul li a:hover {
+    text-decoration: underline;
+    transition: 0.2s ease;
+  }
+  body header .menu-desktop ul li .resume {
+    background: white;
+    color: #0A0A0A;
+  }
+  body header .menu-desktop ul li .resume:hover {
+    background: #0A0A0A;
+    border: 1px solid white;
+    color: white;
+    transition: 0.1s ease;
+    text-decoration: none;
   }
 }
 @media (min-width: 750px) {
   .homepage .hero {
     min-height: 87vh;
+    background-attachment: fixed;
   }
   .homepage .hero .hero-right {
     width: 55%;
@@ -380,10 +469,10 @@ PROJECT STLYING
   .homepage .hero h1 {
     font-size: 3rem;
   }
-  .homepage section.about p {
+  .homepage #about p {
     width: 60%;
   }
-  .homepage section.about h3 {
+  .homepage #about h3 {
     padding: 2% 0;
   }
   .homepage .portfolio .row .column {
@@ -392,9 +481,13 @@ PROJECT STLYING
   }
   .project-page .container {
     display: flex;
+    justify-content: center;
   }
   .project-page .container .intro {
     width: 60%;
+  }
+  .project-page .container .intro h1 {
+    font-size: 3rem;
   }
   .project-page .container .services {
     padding: 5% 0 2% 5%;
@@ -414,12 +507,12 @@ PROJECT STLYING
   }
 }
 @media (min-width: 1000px) {
-  .projects .p-circle img {
-    padding: 8% 13%;
+  .project-page img {
+    width: 100%;
   }
-  .display {
-    display: flex;
-    flex-flow: row wrap;
+  .display .quote {
+    width: 50%;
+    margin: 0 auto;
   }
   .display img {
     width: 50%;
@@ -430,10 +523,6 @@ PROJECT STLYING
   .project-link {
     width: 50%;
   }
-  .return-home {
-    width: 100%;
-    margin-top: 10%;
-  }
 }
 @media (max-width: 400px) {
   .project-page .intro h1 {
@@ -443,8 +532,33 @@ PROJECT STLYING
     padding: 7%;
   }
 }
+@media (max-width: 700px) {
+  .menu-desktop {
+    display: none;
+  }
+}
 @media (max-width: 1000px) {
   .return-home {
     margin-top: 10%;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }

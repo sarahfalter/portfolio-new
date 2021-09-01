@@ -14,6 +14,25 @@
 <body>
     <header>
       <a class="logo" href="index.html">SARAH FALTER</a>
+
+      <button class="hamburger">&#9776;</button>
+      <button class="cross">&#735;</button>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a class="resume" href="falter_sarah_resume_fall21.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+
+      <nav class="menu-desktop">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a class="resume" href="falter_sarah_resume_fall21.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="homepage">
@@ -25,11 +44,11 @@
           </section>
         
 
-        <section class="about">
+        <section id="about">
             <h2>About Me</h2>
             <img class="front" src="images/sarahfalter-4.jpg" alt="Sarah Falter" width="200">
             <p>
-              I'm Sarah, a self-proclaimed web developer and lover of good design. I'm a current student at the University of Florida working on my Master's in Web Design and Online Communications. I love working on projects from ideation to design all the way through the development process. Career-wise I would like to specialize in front-end development. Recently I've been learning React, PHP, and how to build web apps! Outside of work I love to paint and spend time with family/friends.
+              I'm Sarah, a web developer and lover of good design. I'm a current student at the University of Florida working on my Master's in Web Design and Online Communications. I love working on brands from ideation to design all the way through the development process. Career-wise I would like to specialize in front-end development. Recently I've been learning React, PHP, and how to build web apps! Outside of work I love to paint and spend time with family/friends.
             </p>
 
             <h3>Things I've Worked With</h3>
@@ -45,7 +64,7 @@
         </section>
 
 
-       <section class="portfolio">
+       <section id="projects" class="portfolio">
         <h2>Portfolio</h2>
         <div id="myBtnContainer">
           <button class="btn active" onclick="filterSelection('all')"> Show all</button>
@@ -58,7 +77,7 @@
 
           <div class="column solo">
             <div class="content">
-              <img src="images/lunch-mockup.jpg" alt="Mountains" width="300">
+              <img src="images/lunch-mockup.jpg" alt="LunchApp Web App" width="300">
               <h4>ES6 Single Page App</h4>
               <p>Simple Lunch Generator Web App</p>
                         <!-- Trigger/Open The Modal -->
@@ -82,7 +101,7 @@
           
           <div class="column collab">
             <div class="content">
-              <img src="images/brewery-mockup.jpg" alt="Lights" width="300">
+              <img src="images/brewery-mockup.jpg" alt="3 Daughters Brewing Concept Site" width="300">
               <h4>3 Daughters Brewing</h4>
               <p>Concept Site</p>
 
@@ -96,7 +115,7 @@
                     <div class="modal-content">
                       <span class="close">&times;</span>
                       <p>This was a collaboration with a fellow UF student to redesign and develop a site for a business of our choosing. The site is a concept site and not currently used by the St. Pete based brewery. Bootstrap, LESS, HTML, and Javascript were used to develop the site, for design tools we used Adobe XD for wireframing and mockups and Adobe InDesign for our style guide and presentation deck.</p>
-                      <a href="http://sarahfalter.com/p3-falter-sarah/dist/index.html" target="_blank">View App</a>
+                      <a href="http://melissachristiana.com/3daughtersbrewing/" target="_blank">View App</a>
                       <a href="https://github.com/sarahfalter/p1-falter-christiana" target="_blank">Github Repo</a>
                     </div>
                  </div>
@@ -105,7 +124,7 @@
 
           <div class="column solo">
             <div class="content">
-                        <img src="images/met-mockup.jpg" alt="Lights" width="300">
+                        <img src="images/met-mockup.jpg" alt="The Met Concept Site" width="300">
                         <h4>The Metropolitan Museum of Art</h4>
                         <p>Concept Site</p>
 
@@ -123,28 +142,52 @@
                             <a href="https://github.com/sarahfalter/p2-falter-sarah" target="_blank">Github Repo</a>
                           </div>
                        </div>
-            </div>
+                  </div>
           </div>
 
           <div class="column collab">
             <div class="content">
-                <img src="images/hamilton-mockup.jpg" alt="Lights" width="300">
+                <img src="images/hamilton-mockup.jpg" alt="Hamilton Concept Site" width="300">
                 <h4>Hamilton</h4>
                 <p>Tribute Site</p>
-                <a href="hamilton.html">View</a>
+                   <!-- Trigger/Open The Modal -->
+                   <button class="showModal" data-modal="ham-modal">Project Details</button>
+
+                   <!-- The Modal -->
+                   <div class="modal" id="ham-modal">
+
+                     <!-- Modal content -->
+                     <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>This project was completed by myself and two other graduate students at the University of Florida. The goal was to learn to collaborate on the development process and create a site with more dynamic features as we began learning javascript.</p>
+                      <a href="http://sarahfalter.com/Group.Website/" target="_blank">View Site</a>
+                      <a href="https://github.com/abigailfriedman/Group.Website" target="_blank">Github Repo</a>
+                    </div>
               </div>
           </div>
-        
+        </div>
     
           <div class="column solo">
             <div class="content">
-                <img src="images/m&t.jpg" alt="Lights" width="300">
+                <img src="images/m&t.jpg" alt="Mermaids and Tadpoles Concept Site" width="300">
                 <h4>Mermaids and Tadpoles</h4>
                 <p>Brand Identity Design</p>
-                <a href="mt.html">View</a>
+                 <!-- Trigger/Open The Modal -->
+                 <button class="showModal" data-modal="mt-modal">Project Details</button>
+
+                 <!-- The Modal -->
+                 <div class="modal" id="mt-modal">
+
+                  
+                     <!-- Modal content -->
+                     <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>This project was a full brand design for a real world client, Mermaids and Tadpoles, a swim instruction company. 30 students at the University of Florida competed to design her brand. My overall brand identity was selected to represent her business, this includes the color palette, graphical elements, business card, and flyer design. I've included my website concept just for fun and to represent the look and feel of the brand.</p>
+                      <a href="mt.html" target="_blank">View Project</a>
+                    </div>
               </div>
          </div>   
-    
+        </div>
         <!-- END GRID -->
         </div>
     
@@ -153,7 +196,7 @@
     </main>
 
     <footer>
-        <h4>GET IN TOUCH</h4>
+        <h5>GET IN TOUCH</h5>
         <ul>
            <li>
                <a href="https://linkedin.com/in/sarah-falter" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -175,5 +218,6 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="Hamburger.js"></script>
 </body>
 </html>
